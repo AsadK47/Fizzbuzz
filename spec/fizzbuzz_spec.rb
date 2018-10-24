@@ -1,8 +1,9 @@
 require "fizzbuzz"
 
 describe "Fizzbuzz" do
+  numbers = (1..100)
   it "Returns 'fizz' when input is a multiple of 3" do
-    1.upto(100) do |num|
+    numbers.each do |num|
       if num % 3 == 0 && num % 5 != 0
         expect(fizzbuzz(num)).to eq("fizz")
       end
@@ -10,7 +11,7 @@ describe "Fizzbuzz" do
   end
 
   it "Returns 'buzz' when input is a multiple of 5" do
-    1.upto(100) do |num|
+    numbers.each do |num|
       if num % 3 != 0 && num % 5 == 0
         expect(fizzbuzz(num)).to eq("buzz")
       end
@@ -18,7 +19,7 @@ describe "Fizzbuzz" do
   end
 
   it "Returns 'buzz' when input is a multiple of 5" do
-    1.upto(100) do |num|
+    numbers.each do |num|
       if num % 3 == 0 && num % 5 == 0
         expect(fizzbuzz(num)).to eq("fizzbuzz")
       end
@@ -26,7 +27,7 @@ describe "Fizzbuzz" do
   end
 
   it "Returns 'buzz' when input is a multiple of 5" do
-    1.upto(100) do |num|
+    numbers.each do |num|
       if num % 3 != 0 && num % 5 != 0
         expect(fizzbuzz(num)).to eq(num)
       end
